@@ -1,0 +1,227 @@
+:root {
+  --bg-main: #ffffff;
+  --bg-muted: #f6f8fa;
+
+  --text-main: #1f2328;
+  --text-secondary: #57606a;
+  --text-muted: #606870;
+
+  --border-default: #d0d7de;
+  --blue-accent: #0969da;
+
+  --shadow-card:
+    0 1px 0 rgba(27,31,36,0.04),
+    0 8px 24px rgba(140,149,159,0.2);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none ;
+}
+body{
+    background-color: white;
+    color: #1f2328;
+    font-size: 16px;
+    font-weight: 400;
+    font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Helvetica,
+    Arial,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji";
+
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.logo{
+    height: 40px;
+    width: 40px;
+}
+.container{
+    max-width: 1300px;
+    margin-inline: auto;
+}
+.header{
+    padding-inline: 30px;
+    padding-top: 20px;
+}
+.header__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.list{
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    list-style: none;
+}
+.input-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--border-default);
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+.icon{
+    width: 20px;
+    height: 20px;
+}
+input{
+    border: none;
+    outline: none;
+}
+nav{
+    display: flex;
+    gap: 50px;
+}
+.left{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+.link{
+    border: 1px solid #d0d7de;
+    border-radius: 8px;
+    padding: 6px 10px;
+}
+.divider{
+    width: 1px;
+    height: 30px;
+    background-color: var(--text-secondary);
+}
+.title{
+    font-size: 60px;
+    font-weight: 700;
+    color: var(--text-main);
+}
+.button{
+    font-size: 16px;
+    font-weight: 60;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--text-main);
+    color: white;
+    height: 48px;
+    padding-inline: 20px;
+}
+.button--secondary{
+    background-color: transparent;
+    color: var(--text-main);
+    font-weight: 600;
+    border: 2px solid var(--border-default);
+    transition-duration: 0.3s;
+}
+.button--secondary:hover{
+    border-color: var(--text-main);
+}
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px   ;
+    text-align: center;
+    margin-block: 100px;
+}
+.description{
+    color: var(--text-secondary);
+    max-width: 700px;
+}
+
+
+.price-cards{
+    display: grid;
+    column-gap: 30px;
+    grid-template-columns: repeat(3,1fr);
+    padding-bottom: 30px;
+}
+.card{
+    border: 1px solid var(--border-default);
+    box-shadow: var(--shadow-card);
+    border-radius: 4px;
+    background-color: white;
+    text-align: center;
+}
+.card button{
+    width: 100%;
+}
+.card__top{
+    height: 250px;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    justify-content: space-between;
+}
+.card__descr{
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    margin-inline: auto;
+    color: var(--text-secondary);
+}
+.price-row{
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+sup{
+    color: var(--text-secondary);
+    font-size: 18px;
+    font-weight: 400;
+    margin-inline: 5px;
+}
+.price{
+    font-size: 40px;
+}
+
+.card__bottom{
+    background-color: var(--bg-muted);
+    padding: 20px 20px;
+}
+.advatages-list{
+
+}
+.advantages-item{
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 10px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: var(--text-muted);
+}
+.advantages-item span{
+    transform: rotate(180deg);
+}
+
+.recommend .actions{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+.recommend{
+    box-shadow: 0px -20px 0px 10px var(--blue-accent ),0px 4px 0px 10px var(--blue-accent);
+    position: relative;
+}
+.recommend-text{
+    position: absolute;
+    left: 50%;
+    top: -30px;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
