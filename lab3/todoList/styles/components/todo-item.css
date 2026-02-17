@@ -1,0 +1,41 @@
+.todo-item {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    transition-duration: var(--transition-duration);
+    padding: 13px 10px;
+}
+.todo-item__checkbox {
+  flex-shrink: 0;
+  appearance: none;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  border: 1px solid var(--color-gray-4);
+  border-radius: 4px;
+}
+.todo-item__checkbox:checked{
+    background-color: var(--color-dark-2);
+    border-color: var(--color-dark-2);
+}
+.todo-item__checkbox:checked::after {
+  opacity: 1;            /* показали */
+}
+.todo-item__checkbox::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50%);
+    width: 14px;
+    height: 14px;
+    background: url('../../check-icon.svg') center/contain no-repeat;
+}
+.todo-item__del{
+    margin-left: auto;
+    cursor: pointer;
+}

@@ -1,0 +1,8 @@
+.input{
+    width: 100%;
+    height: var(--input-height);
+    padding-inline: 16px;
+    background-color: transparent;
+    border: var(--border);
+    border-radius: var(--border-radius);
+}

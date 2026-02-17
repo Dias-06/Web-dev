@@ -19,6 +19,7 @@ h1{
 }
 .content{
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
     height: 100vh;
