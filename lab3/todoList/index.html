@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
+  <title>To Do List</title>
+  <link rel="stylesheet" href="styles/index.css" />
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+  <div class="todo" >
+    <h1 class="todo__title">To Do List</h1>
+    <form class="todo__form">
+      <div class="todo__field">
+        <input
+          class="input"
+          id="new-task"
+          placeholder="New task title"
+          autocomplete="off"
+        />
+        <button class="button" type="submit">Add</button>
+      </div>
+    </form>
+    <div class="todo__info">
+      <div class="todo__total-tasks">
+        Completed: <span >0</span>
+      </div>
+      <button
+        class="todo__delete-all-button"
+        type="button"
+      >
+        Delete all
+      </button>
+    </div>
+    <ul class="todo__list" >
+    </ul>
+    <div class="todo__empty-message" ></div>
+  </div>
+</body>
+</html>

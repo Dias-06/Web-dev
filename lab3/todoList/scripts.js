@@ -29,12 +29,23 @@ deleteAllBtn.addEventListener('click',function(){
 })
 
 form.addEventListener("submit",function(e){
-  e.preventDefault()
+  const items = list.querySelectorAll(".todo-item");
+  if(items.length <3){
+    if(input.value == ""){
+      e.preventDefault()
+      return alert("empty")
+  }
+    e.preventDefault()
     const title = input.value.trim()
     const task = createNewTask(title)
     list.prepend(task)
     input.value = "";
     updateChecked()
+  }
+  else{
+    e.preventDefault()
+    alert("only 3 tasks")
+  }
 })
 list.addEventListener('click',(e) => {
   if(e.target.closest(".todo-item__del")){
