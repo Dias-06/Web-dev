@@ -1,0 +1,77 @@
+<div class="mx-auto max-w-6xl">
+    <h1 class="text-2xl font-bold text-zinc-900">Online store</h1>
+    <p class="mt-1 text-sm text-zinc-500">
+        Catalog of products from kaspi.kz
+    </p>
+    <section class="grid grid-cols-4 mt-6 gap-4">
+       @for(p of products; track p.id){
+        <article class="overflow-hidden rounded-2xl max-w-[300px] border border-zinc-200 bg-white shadow-sm">
+            <a
+            class="block bg-zinc-50"
+            [href]="p.link"
+            target="_blank"
+            rel="noopener"
+            >
+            <img
+                class="h-56 w-full object-cover object-center p-3"
+                [src]="selectedMainImages[p.id] || p.image"
+                [alt]="p.name"
+            />
+            </a>
+            <div class="flex gap-2 p-3 pt-0">
+                @for(img of p.images; track img){
+                    <img
+                        class="h-14 w-14 cursor-pointer rounded-md border object-contain p-1 transition hover:border-amber-400"
+                        [src]="img"
+                        (click)="setMainImage(img,p)"
+                    />
+                }
+               
+            </div>
+            <div class="flex flex-col gap-2 p-4">
+            <a
+                class="line-clamp-2 text-base font-semibold text-zinc-900 hover:underline"
+                [href]="p.link"
+                target="_blank"
+                rel="noopener"
+            >
+                {{ p.name }}
+            </a>
+
+            <p class="line-clamp-3 text-sm leading-5 text-zinc-600">
+                {{ p.description }}
+            </p>
+
+            <div class="mt-auto flex items-center justify-between pt-2">
+                <span class="text-lg font-bold text-zinc-900">
+                {{ p.price}} ₸
+                </span>
+
+                <span class="rounded-full bg-amber-100 px-2 py-1 text-xs font-medium text-amber-900">
+                ⭐ {{ p.rating }}
+                </span>
+            </div>
+                <div class="mt-3 flex gap-2">
+                    <a
+                        class="inline-flex items-center justify-center rounded-lg border border-zinc-200 px-3 py-2 text-sm font-medium text-zinc-900 hover:bg-zinc-50"
+                        [href]="whatsApp(p)"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        Share WhatsApp
+                    </a>
+
+                    <a
+                        class="inline-flex items-center justify-center rounded-lg border border-zinc-200 px-3 py-2 text-sm font-medium text-zinc-900 hover:bg-zinc-50"
+                        [href]="telegram(p)"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        Share Telegram
+                    </a>
+                </div>
+            </div>
+        </article>
+       }
+    </section>
+</div>
