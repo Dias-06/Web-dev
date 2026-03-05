@@ -1,0 +1,7 @@
+<div class="mx-auto max-w-6xl">
+    <section class="grid grid-cols-4 mt-6 gap-4">
+       @for(p of selectedProducts; track p.id){
+        <app-product (deletedId)="onDelete($any($event))" [product]="p" ></app-product>
+       }
+    </section>
+</div>

@@ -1,0 +1,16 @@
+<div class="mb-6">
+  <ul class="flex flex-wrap justify-center gap-3">
+    @for(category of categories; track category.id){
+      <li>
+        <button
+        (click)="select(category.id)"
+          class="rounded-full border px-4 py-2 text-sm font-medium transition"
+          [ngClass] = "selectedCategory == category.id ? 'bg-amber-100 text-amber-900 border-amber-300' : 'bg-white text-zinc-700 border-zinc-200 hover:bg-zinc-100'"
+        >
+          {{category.name}}
+        </button>
+      </li>
+    }
+  </ul>
+</div>
+
