@@ -1,0 +1,72 @@
+/* app.component.css */
+
+/* Сброс отступов для всего приложения */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* Основной контейнер навигации */
+.nav {
+  background-color: #2c3e50;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Логотип */
+.logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Список навигации */
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+/* Элементы списка и ссылки */
+.nav-list li a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+/* Эффект при наведении */
+.nav-list li a:hover {
+  color: #3498db;
+}
+.nav-list li a.active::after {
+  width: 100%;
+}
+
+/* Эффект подчеркивания при наведении (опционально) */
+.nav-list li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #3498db;
+  transition: width 0.3s ease;
+}
+
+.nav-list li a:hover::after {
+  width: 100%;
+}

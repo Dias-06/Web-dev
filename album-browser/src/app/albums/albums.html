@@ -1,0 +1,16 @@
+<ul class="album-list">
+    @if(loading == true){
+        <h1 id="load">loading...</h1>
+    }
+    @else{
+        @for(album of albums; track album.id){
+            <li class="album-item">
+                <span class="album-id">
+                    {{album.id}}
+                </span>
+                <h1 (click)="goToAlbum(album.id)" class="title">{{album.title}}</h1>
+                <button (click)="deleteAlbum(album.id)" class="delete">Delete</button>
+            </li>
+    }
+    }
+</ul>
