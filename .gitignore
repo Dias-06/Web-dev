@@ -1,0 +1,19 @@
+# Виртуальные окружения
+venv/
+**/venv/
+lab-8/venv/
+lab-8/**/venv/
+
+# Python кэш
+__pycache__/
+*.pyc
+**/__pycache__/
+
+# Базы данных
+db.sqlite3
+*.sqlite3
+**/db.sqlite3
+
+# IDE
+.vscode/
+.idea/
