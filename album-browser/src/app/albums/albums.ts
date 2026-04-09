@@ -17,7 +17,17 @@ export class AlbumsList {
   constructor(private albumService:AlbumService, private router : Router){}
 
   deleteAlbum(id: number){
-    this.albums = this.albums.filter(item => item.id != id)
+    this.albumService.deleteAlbum(id).subscribe({
+      next: (data) => {
+        console.log(data)
+        this.albums = this.albums.filter(album => album.id !== id);
+        this.cdr.detectChanges()
+        
+      },
+      error: (e)=>{
+        alert(e)
+      }
+    })
   }
   
   goToAlbum(id:number){

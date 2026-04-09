@@ -18,6 +18,10 @@ class Student(Person):
     university = 'kbtu'
     def hello(self):
         print(f"My name is: {self.p_name} and i am stadying in KBTU")
+    
+    def passExam(self):
+        print("Student pass exam")
+    
 class Employee(Person):
     occupation = "Teacher"
     def hello(self):

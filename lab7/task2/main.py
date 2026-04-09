@@ -6,3 +6,5 @@ peoples = [person1,st1,emp]
 for p in peoples:
     p.__str__()
     p.hello()
+    if(type(p) == Student):
+        p.passExam()
